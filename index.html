@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, maximum-scale=1.0">
+    <title>The Blues bells</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@562&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script:wght@562&display=swap" rel="stylesheet">
+    <script src='http://fe.it-academy.by/JQ/jquery.js'></script>
+</head>
+<body>
+<script src="./bellaArray.js"></script>
+<header>
+<div id="txt">The Blues bells</div>
+</header>
+
+
+<div id="Content" class="Content">
+    <img id="noteImg" src="images/Music.svg">
+    <p>Уникальное явление ладовой системы современной музыки,
+         которое повлияло на развитие таких жанров, как джаз, рок,
+          фанк, метал и конечно же современная поп музыка. Именно так можно описать блюзовый лад.
+           C The Blues bells вы можете запускать пластинки и пытаться сочинять свою мелодию или просто поиграть импровизацию на Blues bells.
+    </p>
+    <button id="btn" class="Start">Начать музицировать</button>
+    <button id="NEWBTN" class="nonVISIBLE">Продолжить</button>
+</div>
+
+<div id="CONTROLS" class="nonVISIBLE">
+    <div class="nav">
+        <span class="navBtns" id="BACK">Вернуться к описанию</span>
+        <span class="navBtns" id="TOSAVED">К Сохраненным мелодиям</span>
+        <span class="navBtns" id="TOMUSIC">К Творению</span>
+    </div>
+
+   <div id="RECORDBLOCK" class="record">
+                <div id="RECBTN" class="Rec">REC</div>
+                <span id="RECORDVISIBLE">
+                    <img id="PLAY1" class="play" title="прослушать" src="images/play.svg">
+                    <img id="STOP" title="остановить воспроизведение" class="Stop" src="images/Pause.png">
+                    <img src="images/save.svg" id="btnSave" class="nonVISIBLE" title="сохранить мелодию" onclick='addMusic()'>
+                </span>
+   </div>
+</div>
+
+<div id="SAVE" class="nonVISIBLE">
+    <p>Проиграть записанную мелодию:</p>
+    <select id='LIST'></select>
+    <input id="LISTENPLAY"  type='button' value='Проиграть' onclick='playMusicUser()'>
+    <input id="LISTENSTOP" type="button"  value="СТОП" onclick="stopUserPlaying()" >
+</div>
+
+
+<div id="NON" class="nonVISIBLE"></div>
+<div id ='VIN' class="nonVISIBLE"><img id="vinil1" class="vinil" src="images/vinil.png"></div>
+<audio  id=ZVUK src="sound/12.mp3"></audio>
+<script src="./index.js"></script>
+</body>
+</html>
